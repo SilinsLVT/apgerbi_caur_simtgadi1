@@ -7,7 +7,8 @@ public class AtteluParadisana : MonoBehaviour
 {
     public GameObject mainigaisAttels;
     public Sprite[] atteluMasivs;
-    public GameObject IzmeraSlaideris;
+    public GameObject GarumaSlaideris;
+    public GameObject PlatumaSlaideris;
 
     public void izkritosais(int indekss)
     {
@@ -20,18 +21,13 @@ public class AtteluParadisana : MonoBehaviour
     }
 
 
-    public void mainitGarumu()
+
+    public void mainitLielumu()
     {
-
-        float pasreizejaisIzmers = IzmeraSlaideris.GetComponent<Slider>().value;
-        mainigaisAttels.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
-
-    }
-    public void mainitPlatumu()
-    {
-
-        float pasreizejaisIzmers = IzmeraSlaideris.GetComponent<Slider>().value;
-        mainigaisAttels.transform.localScale = new Vector2(1f * pasreizejaisIzmers, 1f * pasreizejaisIzmers);
+        float pasreizejaisIzmers1 = PlatumaSlaideris.GetComponent<Slider>().value;
+        float pasreizejaisIzmers = GarumaSlaideris.GetComponent<Slider>().value;
+        mainigaisAttels.transform.localScale = new Vector2(2f * pasreizejaisIzmers1, pasreizejaisIzmers);
+        mainigaisAttels.transform.localScale = new Vector2(pasreizejaisIzmers, 2f * pasreizejaisIzmers1);
 
     }
 }
